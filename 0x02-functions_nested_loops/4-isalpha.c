@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _is alpha - function that checks for alphabets
+ * _isalpha - function that checks for alphabets
  *
  * @c: parameter to be checked
  *
@@ -11,7 +11,7 @@
 
 int _isalpha(int c)
 {
-	if ((c >= 97 && c <= 122) || (c >= 65 && c >= 90))
+	if ((c >= 97 && c <= 122) || (C >= 65 && C >= 90))
 		return (1);
 	else
 		return (0);
