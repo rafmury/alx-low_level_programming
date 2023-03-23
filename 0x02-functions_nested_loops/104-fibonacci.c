@@ -5,28 +5,24 @@
  *              numbers, starting with 1 and 2
  *
  * Return: Always 0 successful
-*/
+ */
 
 int main(void)
 {
-	unsigned long int t0 = 0, t1 = 1, s;
+	int a = 1, b = 2, c, count = 2;
 
-	int i;
+	printf("%d, %d, ", a, b);
 
-	for (i = 1; i <= 98; i++)
+	while (count < 98)
 	{
-		s = t0 + t1;
-
-		if (i != 98)
-		{
-			printf("%lu, ", s);
-		}
-		else
-		{
-			printf("%lu\n", s);
-		}
-		t0 = t1;
-		t1 = s;
+	c = a + b;
+	printf("%d, ", c);
+	a = b;
+	b = c;
+	count++;
 	}
+	c = a + b;
+	printf("%d\n", c);
 	return (0);
 }
+
