@@ -1,14 +1,37 @@
 #include "main.h"
-
 /**
- * main - check the code
+ * times_table - time table function
  *
  * Return: always 0
  *
  */
 
-int main(void)
+void times_table(void)
 {
-	times_tables();
-	return (0);
+	int x, y, k;
+
+	for (x = 0; x < 10; x++)
+	{
+		for (y = 0; y < 10; y++)
+		{
+			k = x * y;
+			if (y == 0)
+				_putchar(k + '0');
+			if (y != 0 && k < 10)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar(' ');
+				_putchar(k + '0');
+			}
+			else if (k >= 10)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar((k / 10) + '0');
+				_putchar((k % 10) + '0');
+			}
+		}
+		_putchar('\n');
+	}
 }
